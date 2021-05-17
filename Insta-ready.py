@@ -3,7 +3,7 @@ from size_crop import resize_jpg, crop_instagram
 from tint_warmth import convert_temp
 
 def filter_insta(image):
-    contrast = ImageEnhance.Contrast(image).enhance(1.15)
+    contrast = image.ImageEnhance.Contrast().enhance(1.15)
     color = ImageEnhance.Color(contrast).enhance(1.2)
     bright = ImageEnhance.Brightness(color).enhance(0.95)
     unsharp = bright.filter(ImageFilter.UnsharpMask(radius=2, percent=150, threshold=3))
