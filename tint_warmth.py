@@ -1,5 +1,6 @@
 from PIL import Image, ImageChops
 
+#define temperatures for picture conversion
 kelvin_table = {
     1000: (255,56,0),
     1500: (255,109,0),

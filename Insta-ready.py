@@ -2,6 +2,7 @@ from PIL import Image, ImageEnhance, ImageFilter
 from size_crop import resize_jpg, crop_instagram
 from tint_warmth import convert_temp
 
+#apply various filters
 def filter_insta(image):
     contrast = image.ImageEnhance.Contrast().enhance(1.15)
     color = ImageEnhance.Color(contrast).enhance(1.2)

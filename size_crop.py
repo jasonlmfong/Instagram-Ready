@@ -1,5 +1,6 @@
 from PIL import Image
 
+#resize the image to 1080
 def resize_jpg(image):
     if image.width < image.height and image.width != 1080:
         ratio = image.height/image.width
@@ -10,6 +11,7 @@ def resize_jpg(image):
         newimg = image.resize((int(1080*(ratio)),1080))
         return newimg
 
+#crop the image to 1080*1080
 def crop_instagram(image):
     midx = image.width//2
     midy = image.height//2
